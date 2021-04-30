@@ -58,11 +58,55 @@
 | git checkout 分支名 | 切换分支                 |
 | git merge 分支名    | 把指定分支合并到当前分支 |
 
+git合并冲突：
 
+当当前分支和要合并的分支对一个文件有不同修改时，进行merge时文件内出现
+
+```
+<<<<<<< HEAD
+当前分支内容
+=======
+要合并的分支内容
+>>>>>>> 要合并的分支名
+```
+
+可以使用`git merge --abort`退出合并，或
+
+直接在冲突文件内将上面`<<<<<<<`和`>>>>>>>`这部分内容手动修改为最终结果，然后使用`git add`和`git commit`提交此文件，然后再合并分支，手动修改的结果就是合并结果。
 
 ## 第五章 Git团队协作机制
 
+* **团队内协助**
+
+* **跨团队协助**
+
+  fork仓库
+
 ## 第六章 GitHub操作
+
+1. 创建远程仓库（推荐与本地库同名）
+
+2. 远程仓库操作
+
+   | 命令名称                                                     | 作用                                                         |
+   | ------------------------------------------------------------ | ------------------------------------------------------------ |
+   | git remote -v                                                | 查看当前所有远程地址别名                                     |
+   | git remote add 别名 远程地址                                 | 起别名                                                       |
+   | <font color=#FF0000>git push 别名 分支</font>                | <font color=#FF0000>推送本地分支上的内容到远程仓库</font>    |
+   | <font color=#FF0000>git clone 远程地址</font>                | <font color=#FF0000>将远程仓库的内容克隆到本地</font>        |
+   | <font color=#FF0000>git pull 远程库地址别名 远程分支名</font> | <font color=#FF0000>将远程仓库对于分支最新内容拉下来后与当前本地分支直接合并</font> |
+
+   `git remote add vgg-1 https://github.com/pengpeg/visual-git-guide.git` : 直接使用地址过长，使用别名代替
+
+   `git push vgg-1 master`: 将本地库的master分支推送到远程库上（vgg-1可以直接使用地址）
+
+   `git pull vgg-1 master`: 将远程端的master分支拉取到本地仓库
+
+3. 克隆远程仓库
+
+   `git clone https://github.com/pengpeg/visual-git-guide.git`: 拉取代码、初始化本地库、创建别名（默认别名origin）
+
+4. 
 
 ## 第七章 IDE集成Git
 
