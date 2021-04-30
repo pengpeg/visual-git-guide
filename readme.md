@@ -37,16 +37,28 @@
 | <font color=#FF000>git init</font>                        | <font color=#FF000>初始化本地库</font>     |
 | <font color=#FF000>git status</font>                      | <font color=#FF000>查看本地看状态</font>   |
 | <font color=#FF000>git add 文件名</font>                  | <font color=#FF000>添加到暂存区</font>     |
+| <font color=#FF000>git rm --cached 文件名</font>          |                                            |
+| <font color=#FF0000>git restore --staged 文件名</font>    |                                            |
+| <font color=#FF000>git restore 文件名</font>              |                                            |
 | <font color=#FF000>git commit -m "日志信息" 文件名</font> | <font color=#FF000>提交到本地库</font>     |
 | <font color=#FF000>git reflog</font>                      | <font color=#FF000>查看历史记录</font>     |
 | <font color=#FF000>git log</font>                         | <font color=#FF000>查看详细历史记录</font> |
 | <font color=#FF000>git reset --hard 版本号</font>         | <font color=#FF000>版本穿梭</font>         |
 
-
-
-
-
 ## 第四章 Git分支操作
+
+同时并行推进多个功能开发，提高开发效率。
+
+某一分支开发失败不会对其他分支有任何影响。
+
+| 命令名称            | 作用                     |
+| ------------------- | ------------------------ |
+| git branch 分支名   | 创建分支                 |
+| git branch -v       | 查看分支                 |
+| git checkout 分支名 | 切换分支                 |
+| git merge 分支名    | 把指定分支合并到当前分支 |
+
+
 
 ## 第五章 Git团队协作机制
 
